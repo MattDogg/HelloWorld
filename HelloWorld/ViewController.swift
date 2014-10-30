@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     
     
-    let greetings:[String] = ["Hi","Hello","Howdy","Hey"]
+    let greetings:[String] = ["Hi","Hello","Howdy","Hey","Cheerio","Hola","Bonjour"]
     var cycle:Int = 0
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var buttonLabel: UILabel!
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
+    //randomly selects element from array
     func randomGreetings() -> String {
         
         let randomIndex = arc4random_uniform(UInt32(greetings.count))
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func pushButton(nameButton: UIButton) {
-       // buttonLabel.text = "hi(nameTextField.text)"
+    //    buttonLabel.text = "\(nameTextField.text)"
     }
     
     @IBAction func helloWorldAction(nameTextField: UITextField) {
@@ -82,8 +82,7 @@ class ViewController: UIViewController {
         nameLabel.text = "\(myGreeting) \(nameTextField.text)"
        
        
-        /*
-            Example of cycling through elements of array
+        /*    Example of cycling through elements of array
         cycle = cycle + 1
         if cycle > countElements(greetings)-1 {
             cycle = 0
